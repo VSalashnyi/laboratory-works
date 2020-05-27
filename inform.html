@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="reset.css">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <div id="left-header">
+            <img src="images/logo.png">
+        </div><!-- #left-header -->
+        <div id="right-header">
+            <h1>Laboratory work 5-6</h1><br><br>
+            <input type="button" id="but" value="Click" />
+        </div><!-- #right-header -->
+    </header><!-- header-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inform.html">About</a></li>
+            <li><a href="articles.html">Articles</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="right-sidebar">
+            <div>
+                <script type="text/javascript">
+                    const date = new Date();
+                    const days = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+                    const months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+                    document.write(`Сегодня:  ${days[date.getDay()]} ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`);
+                </script>
+            </div>
+            <div>
+                <script type="text/javascript">
+                    {
+                        const date = new Date();
+                        document.write(`Время: ${date.getHours()}:${date.getMinutes()}`)
+                    }
+                </script>
+            </div>
+            <h3>Main events</h3>
+            <aside>
+                <ul>
+                    <li>Новости</li>
+                    <li>Под рекламу</li>
+                </ul>
+            </aside>
+        </div><!-- #right-sidebar -->
+        <div id="content">
+            <section>
+                <article>
+                    <h2>About us section</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+            </section>
+        </div><!-- #content -->
+    </main>
+    <script>
+        $(document).ready(function () {
+            $('#but').click(function () {
+                alert('Почему мы должны использовать jQuery?');
+                $("h2").css("color", "red");
+                $("footer").css("backgroundColor", "#666666");
+            });
+        });
+    </script>
+</div><!-- .wrapper -->
+</body>
+</html>
